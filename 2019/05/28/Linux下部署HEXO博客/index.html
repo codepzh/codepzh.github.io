@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="utf-8">
+  
+  <title>Linux下部署HEXO博客 | ZhenHua&#39;blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  
+    <meta name="keywords" content="潘振华">
+  
+  <meta name="description" content="Linux下部署hexo博客环境准备主机：centos7.4 软件版本：node-v10.15.3 node部署12345678910111213141516171819[root@centos7 ~]# mkdir /app[root@centos7 /app]# lsnode-v10.15.3-linux-x64.tar.xz[root@centos7 /app]# tar -xf node">
+<meta name="keywords" content="HEXO">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Linux下部署HEXO博客">
+<meta property="og:url" content="/2019/05/28/Linux下部署HEXO博客/index.html">
+<meta property="og:site_name" content="ZhenHua&#39;blog">
+<meta property="og:description" content="Linux下部署hexo博客环境准备主机：centos7.4 软件版本：node-v10.15.3 node部署12345678910111213141516171819[root@centos7 ~]# mkdir /app[root@centos7 /app]# lsnode-v10.15.3-linux-x64.tar.xz[root@centos7 /app]# tar -xf node">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://ps3ayzv1b.bkt.clouddn.com/HEXO.png">
+<meta property="og:updated_time" content="2019-05-28T12:18:21.538Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Linux下部署HEXO博客">
+<meta name="twitter:description" content="Linux下部署hexo博客环境准备主机：centos7.4 软件版本：node-v10.15.3 node部署12345678910111213141516171819[root@centos7 ~]# mkdir /app[root@centos7 /app]# lsnode-v10.15.3-linux-x64.tar.xz[root@centos7 /app]# tar -xf node">
+<meta name="twitter:image" content="http://ps3ayzv1b.bkt.clouddn.com/HEXO.png">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link href="//cdn.bootcss.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
+  <script src="/js/pace.min.js"></script>
+  
+
+  
+  
+
+</head>
+</html>
+<body>
+  <div id="container">
+      <header id="header">
+    <div id="banner"></div>
+    <div id="header-outer">
+        <div id="header-menu" class="header-menu-pos animated">
+            <div class="header-menu-container">
+                <a href="/" class="left">
+                    <span class="site-title"></span>
+                </a>
+                <nav id="header-menu-nav" class="right">
+                    
+                    <a href="/">
+                        <i class="fa fa-home"></i>
+                        <span>Home</span>
+                    </a>
+                    
+                    <a href="/archives">
+                        <i class="fa fa-archive"></i>
+                        <span>Archives</span>
+                    </a>
+                    
+                    <a href="/about">
+                        <i class="fa fa-user"></i>
+                        <span>About</span>
+                    </a>
+                    
+                </nav>
+                <a class="mobile-header-menu-button">
+                    <i class="fa fa-bars"></i>
+                </a>
+            </div>
+        </div>
+        <div id="header-row">
+            <div id="logo">
+                <a href="/">
+                    <img src="/images/logo.png" alt="logo">
+                </a>
+            </div>
+            <div class="header-info">
+                <div id="header-title">
+                    
+                </div>
+                <div id="header-description">
+                    
+                </div>
+            </div>
+            <nav class="header-nav">
+                <div class="social">
+                    
+                        <a title="home" target="_blank" href="/">
+                            <i class="fa fa-home fa-2x"></i></a>
+                    
+                        <a title="Github" target="_blank" href="//github.com/codepzh">
+                            <i class="fa fa-github fa-2x"></i></a>
+                    
+                        <a title="Weibo" target="_blank" href="/">
+                            <i class="fa fa-weibo fa-2x"></i></a>
+                    
+                        <a title="Twitter" target="_blank" href="/">
+                            <i class="fa fa-twitter fa-2x"></i></a>
+                    
+                </div>
+            </nav>
+        </div>
+    </div>
+</header>
+      <div class="outer">
+        <section id="main" class="body-wrap"><article id="post-Linux下部署HEXO博客" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 class="post-title" itemprop="name">
+      Linux下部署HEXO博客
+    </h1>
+    <div class="post-title-bar">
+      <ul>
+          
+              <li>
+                  <i class="fa fa-book"></i>
+                  
+                      <a href="/categories/Linux/">Linux</a>
+                  
+              </li>
+          
+        <li>
+          <i class="fa fa-calendar"></i>  2019-05-28
+        </li>
+        <li>
+          <i class="fa fa-eye"></i>
+          <span id="busuanzi_value_page_pv"></span>
+        </li>
+      </ul>
+    </div>
+  
+
+          
+      </header>
+    
+    <div class="article-entry post-content" itemprop="articleBody">
+      
+            
+            <p><img src="http://ps3ayzv1b.bkt.clouddn.com/HEXO.png" alt></p>
+<h1 id="Linux下部署hexo博客"><a href="#Linux下部署hexo博客" class="headerlink" title="Linux下部署hexo博客"></a>Linux下部署hexo博客</h1><h2 id="环境准备"><a href="#环境准备" class="headerlink" title="环境准备"></a>环境准备</h2><p><strong>主机</strong>：<strong>centos7.4</strong></p>
+<p><a href="https://nodejs.org/en/download/" target="_blank" rel="noopener">软件版本：node-v10.15.3</a></p>
+<h3 id="node部署"><a href="#node部署" class="headerlink" title="node部署"></a>node部署</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# mkdir /app</span><br><span class="line"></span><br><span class="line">[root@centos7 /app]# ls</span><br><span class="line">node-v10.15.3-linux-x64.tar.xz</span><br><span class="line"></span><br><span class="line">[root@centos7 /app]# tar -xf node-v10.15.3-linux-x64.tar.xz</span><br><span class="line"></span><br><span class="line">[root@centos7 ~]# vim /etc/profile</span><br><span class="line"></span><br><span class="line">PATH=$PATH:/app/node-v10.15.3-linux-x64/bin</span><br><span class="line"></span><br><span class="line">[root@centos7 ~]# echo $PATH</span><br><span class="line">/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/root/bin:/app/node-v10.15.3-linux-x64/bin</span><br><span class="line"></span><br><span class="line">[root@centos7 ~]# node -v</span><br><span class="line">v10.15.3</span><br><span class="line"></span><br><span class="line">[root@centos7 ~]# npm -v</span><br><span class="line"><span class="number">6.4</span>.1</span><br></pre></td></tr></table></figure>
+<h2 id="安装hexo"><a href="#安装hexo" class="headerlink" title="安装hexo"></a>安装hexo</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# npm install -g hexo-cli</span><br><span class="line"></span><br><span class="line">[root@centos7 ~]# hexo -v</span><br><span class="line">hexo-cli: <span class="number">1.1</span>.0</span><br><span class="line">os: Linux <span class="number">3.10</span>.0-<span class="number">693</span>.el7.x86_64 linux x64</span><br><span class="line">http_parser: <span class="number">2.8</span>.0</span><br><span class="line">node: <span class="number">10.15</span>.3</span><br><span class="line">v8: <span class="number">6.8</span>.275.32-node.51</span><br><span class="line">uv: <span class="number">1.23</span>.2</span><br><span class="line">zlib: <span class="number">1.2</span>.11</span><br><span class="line">ares: <span class="number">1.15</span>.0</span><br><span class="line">modules: <span class="number">64</span></span><br><span class="line">nghttp2: <span class="number">1.34</span>.0</span><br><span class="line">napi: <span class="number">3</span></span><br><span class="line">openssl: <span class="number">1.1</span>.0j</span><br><span class="line">icu: <span class="number">62.1</span></span><br><span class="line">unicode: <span class="number">11.0</span></span><br><span class="line">cldr: <span class="number">33.1</span></span><br><span class="line">tz: <span class="number">2018</span>e</span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="配置博客"><a href="#配置博客" class="headerlink" title="配置博客"></a>配置博客</h2><h3 id="创建博客目录"><a href="#创建博客目录" class="headerlink" title="创建博客目录"></a>创建博客目录</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 ~]# mkdir /blog</span><br><span class="line"></span><br><span class="line">[root@centos7 ~]# cd  /blog/</span><br><span class="line">[root@centos7 /blog]# pwd</span><br><span class="line">/blog</span><br></pre></td></tr></table></figure>
+<h3 id="博客初始化"><a href="#博客初始化" class="headerlink" title="博客初始化"></a>博客初始化</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 /blog]# hexo init</span><br><span class="line"></span><br><span class="line">[root@centos7 /blog]# hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http:<span class="comment">//localhost:4000 . Press Ctrl+C to stop.</span></span><br></pre></td></tr></table></figure>
+<h3 id="编辑文章"><a href="#编辑文章" class="headerlink" title="编辑文章"></a>编辑文章</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 /blog]# hexo n "我的第一篇文章"</span><br><span class="line">INFO  Created: /blog/source/_posts/我的第一篇文章.md</span><br><span class="line"></span><br><span class="line">[root@centos7 /blog]# vim /blog/source/_posts/我的第一篇文章.md </span><br><span class="line"></span><br><span class="line">[root@centos7 /blog]# hexo clean</span><br><span class="line">INFO  Deleted database.</span><br><span class="line"></span><br><span class="line">[root@centos7 /blog]# hexo g</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Files loaded in <span class="number">310</span> ms</span><br><span class="line">INFO  Generated: index.html</span><br><span class="line">INFO  Generated: archives/index.html</span><br><span class="line">INFO  Generated: fancybox/blank.gif</span><br><span class="line">INFO  Generated: fancybox/fancybox_loading.gif</span><br><span class="line">INFO  Generated: fancybox/fancybox_loading@<span class="number">2</span>x.gif</span><br><span class="line">INFO  Generated: fancybox/fancybox_overlay.png</span><br><span class="line">INFO  Generated: fancybox/fancybox_sprite@<span class="number">2</span>x.png</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.css</span><br><span class="line">INFO  Generated: archives/<span class="number">2019</span>/<span class="number">05</span>/index.html</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.pack.js</span><br><span class="line">INFO  Generated: archives/<span class="number">2019</span>/index.html</span><br><span class="line">INFO  Generated: fancybox/fancybox_sprite.png</span><br><span class="line">INFO  Generated: css/fonts/FontAwesome.otf</span><br><span class="line">INFO  Generated: fancybox/helpers/fancybox_buttons.png</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.eot</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.woff</span><br><span class="line">INFO  Generated: js/script.js</span><br><span class="line">INFO  Generated: css/images/banner.jpg</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.css</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-buttons.js</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-media.js</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.css</span><br><span class="line">INFO  Generated: fancybox/helpers/jquery.fancybox-thumbs.js</span><br><span class="line">INFO  Generated: css/style.css</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.svg</span><br><span class="line">INFO  Generated: fancybox/jquery.fancybox.js</span><br><span class="line">INFO  Generated: css/fonts/fontawesome-webfont.ttf</span><br><span class="line">INFO  Generated: <span class="number">2019</span>/<span class="number">05</span>/<span class="number">27</span>/我的第一篇文章/index.html</span><br><span class="line">INFO  Generated: <span class="number">2019</span>/<span class="number">05</span>/<span class="number">27</span>/hello-world/index.html</span><br><span class="line">INFO  <span class="number">29</span> files generated in <span class="number">797</span> ms</span><br><span class="line"></span><br><span class="line">[root@centos7 /blog]# hexo s</span><br><span class="line">INFO  Start processing</span><br><span class="line">INFO  Hexo is running at http:<span class="comment">//localhost:4000 . Press Ctrl+C to stop.</span></span><br></pre></td></tr></table></figure>
+<hr>
+<h2 id="将博客部署在GitHub上"><a href="#将博客部署在GitHub上" class="headerlink" title="将博客部署在GitHub上"></a>将博客部署在GitHub上</h2><h3 id="安装Git插件"><a href="#安装Git插件" class="headerlink" title="安装Git插件"></a>安装Git插件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 /blog]# npm install --save hexo-deployer-git</span><br><span class="line">npm WARN babel-eslint@<span class="number">10.0</span>.1 <span class="keyword">requires</span> a peer of eslint@&gt;= <span class="number">4.12</span>.1 but none is installed. You must install peer dependencies yourself.</span><br><span class="line">npm WARN optional SKIPPING OPTIONAL DEPENDENCY: fsevents@<span class="number">1.2</span>.9 (node_modules/fsevents):</span><br><span class="line">npm WARN notsup SKIPPING OPTIONAL DEPENDENCY: Unsupported platform <span class="keyword">for</span> fsevents@<span class="number">1.2</span>.9: wanted &#123;<span class="string">"os"</span>:<span class="string">"darwin"</span>,<span class="string">"arch"</span>:<span class="string">"any"</span>&#125; (current: &#123;<span class="string">"os"</span>:<span class="string">"linux"</span>,<span class="string">"arch"</span>:<span class="string">"x64"</span>&#125;)</span><br><span class="line"></span><br><span class="line">\- hexo-deployer-git@<span class="number">1.0</span>.0</span><br><span class="line">added <span class="number">59</span> packages from <span class="number">48</span> contributors and audited <span class="number">6952</span> packages in <span class="number">12.708</span>s</span><br><span class="line">found <span class="number">3</span> vulnerabilities (<span class="number">2</span> low, <span class="number">1</span> moderate)</span><br><span class="line">run `npm audit fix` to fix them, or `npm audit` <span class="keyword">for</span> details</span><br></pre></td></tr></table></figure>
+<h3 id="修改配置文件"><a href="#修改配置文件" class="headerlink" title="修改配置文件"></a>修改配置文件</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 /blog]# vim _config.yml</span><br><span class="line"></span><br><span class="line">\# Deployment</span><br><span class="line"></span><br><span class="line">\## Docs: https://hexo.io/docs/deployment.html</span><br><span class="line"></span><br><span class="line">deploy:</span><br><span class="line">  type: git</span><br><span class="line">  repo: https:<span class="comment">//github.com/codepzh/codepzh.github.io.git</span></span><br></pre></td></tr></table></figure>
+<h3 id="报错处理"><a href="#报错处理" class="headerlink" title="报错处理"></a>报错处理</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">Run</span><br><span class="line"></span><br><span class="line">  git config --global user.email <span class="string">"you@example.com"</span></span><br><span class="line">  git config --global user.name <span class="string">"Your Name"</span></span><br></pre></td></tr></table></figure>
+<h3 id="把博客推送到GitHub"><a href="#把博客推送到GitHub" class="headerlink" title="把博客推送到GitHub"></a>把博客推送到GitHub</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 /blog]# hexo d</span><br><span class="line">INFO  Deploying: git</span><br><span class="line">INFO  Clearing .deploy_git folder...</span><br><span class="line">INFO  Copying files from <span class="keyword">public</span> folder...</span><br><span class="line">INFO  Copying files from extend dirs...</span><br><span class="line"></span><br><span class="line">\# On branch master</span><br><span class="line"></span><br><span class="line">nothing to commit, working directory clean</span><br><span class="line">Username <span class="keyword">for</span> <span class="string">'https://github.com'</span>: codepzh  </span><br><span class="line">Password <span class="keyword">for</span> <span class="string">'https://codepzh@github.com'</span>: </span><br><span class="line">Counting objects: <span class="number">45</span>, done.</span><br><span class="line">Delta compression using up to <span class="number">2</span> threads.</span><br><span class="line">Compressing objects: <span class="number">100</span>% (<span class="number">37</span>/<span class="number">37</span>), done.</span><br><span class="line">Writing objects: <span class="number">100</span>% (<span class="number">45</span>/<span class="number">45</span>), <span class="number">509.70</span> KiB | <span class="number">0</span> bytes/s, done.</span><br><span class="line">Total <span class="number">45</span> (delta <span class="number">5</span>), reused <span class="number">0</span> (delta <span class="number">0</span>)</span><br><span class="line">remote: Resolving deltas: <span class="number">100</span>% (<span class="number">5</span>/<span class="number">5</span>), done.</span><br><span class="line">To https:<span class="comment">//github.com/codepzh/codepzh.github.io.git</span></span><br><span class="line"></span><br><span class="line"> \* [<span class="keyword">new</span> branch]      HEAD -&gt; master</span><br><span class="line">Branch master set up to track remote branch master from https:<span class="comment">//github.com/codepzh/codepzh.github.io.git.</span></span><br></pre></td></tr></table></figure>
+<h3 id="主题下载"><a href="#主题下载" class="headerlink" title="主题下载"></a>主题下载</h3><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 /blog]# git clone https://github.com/shenliyang/hexo-theme-snippet.git themes/snippet</span><br></pre></td></tr></table></figure>
+<h3 id="修改主题"><a href="#修改主题" class="headerlink" title="修改主题"></a>修改主题</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 /blog]# vim _config.yml</span><br><span class="line"></span><br><span class="line">theme: snippet</span><br></pre></td></tr></table></figure>
+<h3 id="推送"><a href="#推送" class="headerlink" title="推送"></a>推送</h3><blockquote>
+<p>tig: 因为是静态站点所以每次要修改配置或者编写文章 都需要执行以下操作推送到远端github站点上</p>
+</blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[root@centos7 /blog]# hexo clean</span><br><span class="line">[root@centos7 /blog]# hexo g</span><br><span class="line">[root@centos7 /blog]# hexo d</span><br></pre></td></tr></table></figure>
+
+            <div class="post-copyright">
+    <div class="content">
+        <p>最后更新： 2019年05月28日 20:18</p>
+        <p>原始链接： <a class="post-url" href="/2019/05/28/Linux下部署HEXO博客/" title="Linux下部署HEXO博客">/2019/05/28/Linux下部署HEXO博客/</a></p>
+        <footer>
+            <a href>
+                <img src="/images/logo.png" alt="ZhenHua">
+                ZhenHua
+            </a>
+        </footer>
+    </div>
+</div>
+
+      
+        
+            
+<div class="page-reward">
+    <a id="rewardBtn" href="javascript:;">赏</a>
+</div>
+
+<div id="reward" class="post-modal reward-lay">
+    <a class="close" href="javascript:;" id="reward-close">×</a>
+    <span class="reward-title">
+        <i class="icon icon-quote-left"></i>
+        请我吃糖~
+        <i class="icon icon-quote-right"></i>
+    </span>
+    <div class="reward-content">
+        
+        <div class="reward-code">
+            <img id="rewardCode" src="/images/wechat_code.jpg" alt="打赏二维码">
+        </div>
+        <div class="reward-select">
+            
+            <label class="reward-select-item checked" data-id="wechat" data-wechat="/images/wechat_code.jpg">
+                <img class="reward-select-item-wechat" src="/images/wechat.png" alt="微信">
+            </label>
+            
+            
+            <label class="reward-select-item" data-id="alipay" data-alipay="/images/alipay_code.jpg">
+                <img class="reward-select-item-alipay" src="/images/alipay.png" alt="支付宝">
+            </label>
+            
+        </div>
+    </div>
+</div>
+
+
+        
+    </div>
+    <footer class="article-footer">
+        
+        
+<div class="post-share">
+    <a href="javascript:;" id="share-sub" class="post-share-fab">
+        <i class="fa fa-share-alt"></i>
+    </a>
+    <div class="post-share-list" id="share-list">
+        <ul class="share-icons">
+          <li>
+            <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=/2019/05/28/Linux下部署HEXO博客/&title=《Linux下部署HEXO博客》 — ZhenHua'blog&pic=http://ps3ayzv1b.bkt.clouddn.com/HEXO.png" data-title="微博">
+              <i class="fa fa-weibo"></i>
+            </a>
+          </li>
+          <li>
+            <a class="weixin share-sns" id="wxFab" href="javascript:;" data-title="微信">
+              <i class="fa fa-weixin"></i>
+            </a>
+          </li>
+          <li>
+            <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=/2019/05/28/Linux下部署HEXO博客/&title=《Linux下部署HEXO博客》 — ZhenHua'blog&source=" data-title="QQ">
+              <i class="fa fa-qq"></i>
+            </a>
+          </li>
+          <li>
+            <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=/2019/05/28/Linux下部署HEXO博客/" data-title="Facebook">
+              <i class="fa fa-facebook"></i>
+            </a>
+          </li>
+          <li>
+            <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《Linux下部署HEXO博客》 — ZhenHua'blog&url=/2019/05/28/Linux下部署HEXO博客/&via=" data-title="Twitter">
+              <i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li>
+            <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=/2019/05/28/Linux下部署HEXO博客/" data-title="Google+">
+              <i class="fa fa-google-plus"></i>
+            </a>
+          </li>
+        </ul>
+     </div>
+</div>
+<div class="post-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;" id="wxShare-close">×</a>
+    <p>扫一扫，分享到微信</p>
+    <img src="//api.qrserver.com/v1/create-qr-code/?data=/2019/05/28/Linux下部署HEXO博客/" alt="微信分享二维码">
+</div>
+
+<div class="mask"></div>
+
+        
+        <ul class="article-footer-menu">
+            
+            
+  <li class="article-footer-tags">
+    <i class="fa fa-tags"></i>
+      
+    <a href="/tags/HEXO/" class="color5">HEXO</a>
+      
+  </li>
+
+        </ul>
+        
+    </footer>
+  </div>
+</article>
+
+
+    <aside class="post-toc-pos post-toc-top" id="post-toc">
+        <nav class="post-toc-wrap">
+            <ol class="post-toc"><li class="post-toc-item post-toc-level-1"><a class="post-toc-link" href="#Linux下部署hexo博客"><span class="post-toc-text">Linux下部署hexo博客</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#环境准备"><span class="post-toc-text">环境准备</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#node部署"><span class="post-toc-text">node部署</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#安装hexo"><span class="post-toc-text">安装hexo</span></a></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#配置博客"><span class="post-toc-text">配置博客</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#创建博客目录"><span class="post-toc-text">创建博客目录</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#博客初始化"><span class="post-toc-text">博客初始化</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#编辑文章"><span class="post-toc-text">编辑文章</span></a></li></ol></li><li class="post-toc-item post-toc-level-2"><a class="post-toc-link" href="#将博客部署在GitHub上"><span class="post-toc-text">将博客部署在GitHub上</span></a><ol class="post-toc-child"><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#安装Git插件"><span class="post-toc-text">安装Git插件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改配置文件"><span class="post-toc-text">修改配置文件</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#报错处理"><span class="post-toc-text">报错处理</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#把博客推送到GitHub"><span class="post-toc-text">把博客推送到GitHub</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#主题下载"><span class="post-toc-text">主题下载</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#修改主题"><span class="post-toc-text">修改主题</span></a></li><li class="post-toc-item post-toc-level-3"><a class="post-toc-link" href="#推送"><span class="post-toc-text">推送</span></a></li></ol></li></ol></li></ol>
+        </nav>
+    </aside>
+    
+
+<nav id="article-nav">
+  
+    <a href="/2019/05/28/基于LNMP搭建个人博客/" id="article-nav-newer" class="article-nav-link-wrap">
+
+      <span class="article-nav-title">
+        <i class="fa fa-hand-o-left" aria-hidden="true"></i>
+        
+          基于LNMP搭建个人博客
+        
+      </span>
+    </a>
+  
+  
+</nav>
+
+
+
+    
+</section>
+        
+      </div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+<p>
+    <span id="busuanzi_container_site_uv" style="display:none">
+        总访客数：<span id="busuanzi_value_site_uv"></span>
+    </span>
+    <span id="busuanzi_container_site_pv" style="display:none">
+        总访问量：<span id="busuanzi_value_site_pv"></span>
+    </span>
+</p>
+
+
+      <p>
+        Powered by  <a href="http://hexo.io/" target="_blank">Hexo</a>
+        Theme <a href="//github.com/wongminho/hexo-theme-miho" target="_blank">MiHo</a>
+      &copy; 2019 ZhenHua<br>
+      </p>
+    </div>
+  </div>
+</footer>
+    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<script src="//cdn.bootcss.com/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  var mihoConfig = {
+      root: "",
+      animate: true,
+      isHome: false,
+      share: true,
+      reward: 1
+  }
+</script>
+<div class="sidebar">
+    <div id="sidebar-search" title="Search">
+        <i class="fa fa-search"></i>
+    </div>
+    <div id="sidebar-category" title="Categories">
+        <i class="fa fa-book"></i>
+    </div>
+    <div id="sidebar-tag" title="Tags">
+        <i class="fa fa-tags"></i>
+    </div>
+    <div id="sidebar-top">
+        <span class="sidebar-top-icon"><i class="fa fa-angle-up"></i></span>
+    </div>
+</div>
+<div class="sidebar-menu-box" id="sidebar-menu-box">
+    <div class="sidebar-menu-box-container">
+        <div id="sidebar-menu-box-categories">
+            <a class="category-link" href="/categories/Linux/">Linux</a>
+        </div>
+        <div id="sidebar-menu-box-tags">
+            <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a>
+        </div>
+    </div>
+    <a href="javascript:;" class="sidebar-menu-box-close">&times;</a>
+</div>
+<div class="mobile-header-menu-nav" id="mobile-header-menu-nav">
+    <div class="mobile-header-menu-container">
+        <span class="title">Menus</span>
+        <ul class="mobile-header-menu-navbar">
+            
+            <li>
+                <a href="/">
+                    <i class="fa fa-home"></i><span>Home</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/archives">
+                    <i class="fa fa-archive"></i><span>Archives</span>
+                </a>
+            </li>
+            
+            <li>
+                <a href="/about">
+                    <i class="fa fa-user"></i><span>About</span>
+                </a>
+            </li>
+            
+        </ul>
+    </div>
+    <div class="mobile-header-tag-container">
+        <span class="title">Tags</span>
+        <div id="mobile-header-container-tags">
+            <a href="/tags/HEXO/" style="font-size: 10px;">HEXO</a>
+        </div>
+    </div>
+</div>
+<div class="search-wrap">
+    <span class="search-close">&times;</span>
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+            <i class="icon icon-lg icon-chevron-left"></i>
+        </a>
+        <input class="search-field" placeholder="Search..." id="keywords">
+        <a id="search-submit" href="javascript:;">
+            <i class="fa fa-search"></i>
+        </a>
+    <div class="search-container" id="search-container">
+        <ul class="search-result" id="search-result">
+        </ul>
+    </div>
+</div>
+
+<div id="search-tpl">
+    <li class="search-result-item">
+        <a href="{url}" class="search-item-li">
+            <span class="search-item-li-title" title="{title}">{title}</span>
+        </a>
+    </li>
+</div>
+<script src="/js/search.js"></script>
+<script src="/js/main.js"></script>
+
+
+  <script src="//cdn.bootcss.com/particles.js/2.0.0/particles.min.js"></script>
+  <div id="particles"></div>
+  <script src="/js/particles.js"></script>
+
+
+
+
+
+
+
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  <script src="//cdn.bootcss.com/scrollReveal.js/3.0.5/scrollreveal.js"></script>
+  <script src="/js/animate.js"></script>
+
+
+  <script src="/js/pop-img.js"></script>
+  <script>
+     $(".article-entry p img").popImg();
+  </script>
+
+  </div>
+</body>
+</html>
